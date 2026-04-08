@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { --sat: env(safe-area-inset-top); --sab: env(safe-area-inset-bottom); }
+  body { @apply font-sans antialiased bg-slate-50 text-slate-900; }
+  .dark body { @apply bg-slate-900 text-slate-50; }
+}
+
+@layer utilities {
+  .pb-safe { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+  .pt-safe { padding-top: max(1rem, env(safe-area-inset-top)); }
+}
+
+/* Leaflet map z-index fixes */
+.leaflet-container { z-index: 1; }

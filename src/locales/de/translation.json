@@ -1,0 +1,10 @@
+{
+  "nav": { "home": "Home", "explore": "Explore", "ai_guide": "AI Guide", "saved": "Saved", "profile": "Profile", "add": "Add Place" },
+  "auth": { "login": "Sign In", "signup": "Sign Up", "logout": "Sign Out", "email": "Email", "password": "Password", "forgot": "Forgot password?" },
+  "onboarding": { "step_cuisines": "What do you love to eat?", "step_vibes": "What atmosphere?", "step_budget": "Budget?", "step_dietary": "Dietary needs?" },
+  "ai": { "placeholder": "Ask GastroGuide anything...", "greeting": "Hi! I'm GastroGuide. Tell me what you're looking for!", "limit_free": "{{count}}/5 daily requests used" },
+  "location": { "open": "Open now", "closed": "Closed", "save": "Save", "visited": "Mark visited", "book": "Book a table", "reviews": "Reviews" },
+  "submissions": { "title": "Suggest a Place", "ai_fill": "Fill with AI", "must_try": "Must Try", "insider_tip": "Insider Tip", "submit": "Submit for Review", "success": "Thank you! Under review." },
+  "donate": { "title": "Support GastroMap", "cta": "Support →", "badge": "Supporter", "success": "Thank you for supporting GastroMap!" },
+  "common": { "loading": "Loading...", "error": "Something went wrong", "retry": "Try again", "save": "Save", "cancel": "Cancel", "close": "Close" }
+}
