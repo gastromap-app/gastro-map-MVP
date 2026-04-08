@@ -1,10 +1,102 @@
+```
+# Dependencies
 node_modules/
+
+# Build artifacts
 dist/
+build/
+target/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Environment
 .env
 .env.local
-.env.*.local
-.DS_Store
-*.log
-.vercel
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.hprof
+hs_err_pid*
+
+# C/C++
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.dylib
+*.exe
+*.out
+
+# Ruby
+*.gem
+*.rbc
+*.sass-cache
+.bundle/
+vendor/bundle/
+
+# Go
+*.out
+
+# Rust
+*.rlib
+*.so
+*.dylib
+*.dll
+target/
+
+# Gradle
+.gradle/
+build/
+
+# Coverage
 coverage/
-.cache/
+htmlcov/
+.coverage
+
+# Compressed
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+
+# System
+.DS_Store
+Thumbs.db
+```
