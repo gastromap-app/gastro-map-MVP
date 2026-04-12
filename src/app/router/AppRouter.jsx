@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import RequireAuth from '@/shared/components/guards/RequireAuth'
 import RequireAdmin from '@/shared/components/guards/RequireAdmin'
 import RequireFeatureFlag from '@/shared/components/guards/RequireFeatureFlag'
+import OnboardingGate from '@/features/auth/components/OnboardingGate'
 import MainLayout from '@/shared/components/layout/MainLayout'
 import PublicLayout from '@/shared/components/layout/PublicLayout'
 
@@ -83,20 +84,22 @@ export default function AppRouter() {
           <Route path="/explore/:city"   element={<ExplorePage />} />
           <Route path="/location/:id"    element={<LocationPage />} />
 
-          {/* Authenticated */}
+          {/* Authenticated — OnboardingGate shows overlay for new users */}
           <Route element={<RequireAuth />}>
-            <Route path="/dashboard"   element={<DashboardPage />} />
-            <Route path="/ai-guide"    element={<GastroGuidePage />} />
-            <Route path="/saved"       element={<SavedPage />} />
-            <Route path="/visited"     element={<VisitedPage />} />
-            <Route path="/leaderboard" element={<LeaderboardPage />} />
-            <Route path="/profile"     element={<ProfilePage />} />
-            <Route path="/profile/edit" element={<ProfileEditPage />} />
+            <Route element={<OnboardingGate />}>
+              <Route path="/dashboard"   element={<DashboardPage />} />
+              <Route path="/ai-guide"    element={<GastroGuidePage />} />
+              <Route path="/saved"       element={<SavedPage />} />
+              <Route path="/visited"     element={<VisitedPage />} />
+              <Route path="/leaderboard" element={<LeaderboardPage />} />
+              <Route path="/profile"     element={<ProfilePage />} />
+              <Route path="/profile/edit" element={<ProfileEditPage />} />
 
-            {/* Community Submissions — controlled by feature flag */}
-            <Route element={<RequireFeatureFlag flag="community_submissions" />}>
-              <Route path="/add-place"        element={<AddPlacePage />} />
-              <Route path="/my-submissions"   element={<MySubmissionsPage />} />
+              {/* Community Submissions — controlled by feature flag */}
+              <Route element={<RequireFeatureFlag flag="community_submissions" />}>
+                <Route path="/add-place"        element={<AddPlacePage />} />
+                <Route path="/my-submissions"   element={<MySubmissionsPage />} />
+              </Route>
             </Route>
           </Route>
         </Route>
